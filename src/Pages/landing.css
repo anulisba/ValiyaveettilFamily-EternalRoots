@@ -1,0 +1,770 @@
+/* MemorialWebsite.css - Updated with CSS Variables */
+
+/* Color Variables */
+
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+}
+
+.t-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-header-bg);
+    box-shadow: 0 2px 10px var(--color-shadow);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header .t-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-family: "Poiret One", sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-left: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-light);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.secondary-nav {
+    background-color: var(--color-bg-light);
+    box-shadow: 0 2px 10px var(--color-shadow);
+    padding: 10px 0;
+    position: sticky;
+    top: 70px;
+    /* height of main header */
+    z-index: 999;
+}
+
+.secondary-nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.secondary-nav button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.secondary-nav .btn-primary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.secondary-nav .btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: none;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+
+.secondary-nav .btn-secondary:hover,
+.secondary-nav .btn-primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg-soft) 100%);
+    text-align: center;
+    color: var(--color-text-dark);
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--color-text-light);
+}
+
+.cta-button {
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 94, 60, 0.4);
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 94, 60, 0.5);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-overlay);
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-family: "Noto Serif Malayalam", serif;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin: 0 auto 20px;
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+
+/* Family Intro */
+.family-intro {
+    padding: 0;
+    padding-bottom: 80px;
+}
+
+.family-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Noto Serif Malayalam", serif;
+}
+
+
+.family-text {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+    color: var(--color-text-dark);
+}
+
+.family-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.family-image {
+    flex: 1 1;
+    /* responsive flex */
+    max-width: 100%;
+    display: flex;
+    /* use flex to center vertically */
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* do not exceed container */
+}
+
+.family-image img {
+    width: 100%;
+    /* image scales with container */
+    height: auto;
+    /* maintain aspect ratio */
+    border-radius: 15px;
+    object-fit: cover;
+    /* crop if needed without distortion */
+}
+
+/* Optional placeholder */
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 992px) {
+    .family-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .family-text,
+    .family-image {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .family-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .family-image img {
+        height: auto;
+    }
+}
+
+
+/* Memorial Section */
+.memorial-section {
+    background-color: var(--color-bg-light);
+    padding: 80px 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: "Noto Serif Malayalam", serif;
+    color: var(--color-text-dark);
+}
+
+.memorial-title h2 {
+    font-size: 2rem;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.memorial-title .underline {
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 0 auto 50px auto;
+    border-radius: 2px;
+}
+
+.memorial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.memorial-image {
+    width: 400px;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.memorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.memorial-image:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.memorial-text h3 {
+    font-size: 1.8rem;
+    color: var(--color-text-dark);
+    margin-bottom: 8px;
+}
+
+.memorial-years {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.memorial-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .memorial-content {
+        gap: 20px;
+    }
+
+    .memorial-title .underline {
+        width: 80px;
+        height: 3px;
+        background-color: var(--color-primary);
+        margin: 0 auto 10px auto;
+        border-radius: 2px;
+    }
+
+    .memorial-image {
+        width: 250px;
+        height: 350px;
+    }
+
+    .memorial-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .memorial-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+}
+
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    padding: 80px 0;
+    font-family: "Noto Serif Malayalam", serif;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    font-family: "Noto Serif Malayalam", serif;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-bg-light);
+    border: 2px solid var(--color-bg-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.minimal-cross {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.minimal-cross svg line {
+    stroke: #F0EDE6;
+    /* light cream color, adjust as needed */
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-light);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--color-bg-light);
+        transition: 0.3s;
+        box-shadow: 0 5px 10px var(--color-shadow);
+    }
+
+    .nav-open {
+        left: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .nav li {
+        margin: 15px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member-image {
+        height: 400px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+
+        margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .family-members {
+        margin-top: 60px;
+    }
+
+    .family-content {
+        flex-direction: column;
+    }
+
+
+
+    .family-text p {
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-box {
+    background: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    animation: slideUp 0.4s ease-in-out;
+}
+
+.popup-box h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.popup-box p {
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.popup-btn {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(139, 94, 60, 0.3);
+}
+
+.popup-btn:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+    color: var(--color-accent);
+}
+
+.popup-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.popup-tagline {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .popup-box {
+        width: 90%;
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+
+    .popup-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .popup-box p {
+        font-size: 0.95rem;
+    }
+
+    .popup-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .popup-close {
+        font-size: 1.3rem;
+        top: 8px;
+        right: 10px;
+    }
+}
+
+/* Popup Animations */
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
