@@ -18,7 +18,7 @@
     /* gentle beige background */
     --color-bg-section: #FAF6F0;
     /* light beige for sections */
-    --color-header-bg: rgba(250, 245, 235, 0.95);
+    --color-header-bg: rgba(250, 245, 235, 1);
     /* translucent soft beige */
     --color-footer-bg: #4B3F36;
     /* deep brown footer background */

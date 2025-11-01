@@ -152,7 +152,7 @@ const MemorialWebsite = () => {
                         <div className="memorial-text">
                             <h3>
                                 {language === "ml" ? "ജോസഫ് മാത്യു (ജോയ്) വലിയവീട്ടിൽ" : "Jospeh Mathew (Joy) Valiyaveettil"}</h3>
-                            <p className="memorial-years">23-08-1941 - 29-09-2025</p>
+                            <p className="memorial-years">23-08-1941 <span style={{ fontWeight: "bold" }}>—</span> 29-09-2025</p>
                             {/* <p className="memorial-description">
                                 വലിയവീട്ടിൽ മാത്തുക്കുട്ടി തെച്ചാമ്മ താന്നിക്കൽ ദമ്പതികളുടെ 10 മക്കളിൽ മൂത്തമകനായ ജോസഫ് മാത്യു (ജോയ്) 1941 ഇൽ തന്റെ അമ്മവീടായ ആലപ്പുഴ തത്തംപള്ളി താന്നിക്കൽ വീട്ടിൽ ജനിച്ചു. സഹോദരങ്ങളായ തോമസ് മാത്യു, ജോൺ മാത്യു, ജോളി മാത്യു, മേരിക്കുട്ടി സെബാസ്റ്റിയൻ, ജെസ്സി ജോസ്, ജോമി മാത്യു, റെജി ബാബു, ജാനമ്മ ജോർജ്, പരേതയായ പൊന്നമ്മ ലൂക്കോസ് എന്നിവരോടൊപ്പം ചങ്ങനാശ്ശേരി തൃക്കോട്ടിതാനം എന്നിടത്ത്  തൻ്റെ ബാല്യകാലം ചിലവഴിക്കുകയും, തുടർന്ന് പത്താംക്ലാസ് വരെ സെന്റ് ബെർച്ഛ്മൻസ് സ്കൂളിലും , പ്രീഡിഗ്രി സെന്റ് ബെർച്ഛ്മൻസ് കോളേജിലുമായി  വിദ്യാഭ്യാസം പൂർത്തിയാക്കി.
                             </p>
@@ -187,7 +187,7 @@ const MemorialWebsite = () => {
                             </p>
                         </div>
                         <div className="family-image">
-                            <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762013732/WhatsApp_Image_2025-11-01_at_9.45.11_PM_o2q2ng.jpg"
+                            <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762014337/IMG-20251101-WA0043_ozoebh.jpg"
                                 alt="Family" className="luxury-image" />
                         </div>
                     </div>

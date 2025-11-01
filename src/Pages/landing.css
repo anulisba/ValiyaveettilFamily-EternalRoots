@@ -665,7 +665,7 @@ section {
 }
 
 .popup-box h3 {
-    color: var(--color-primary);
+    color: var(--color-text-dark);
     font-size: 1.4rem;
     margin-bottom: 10px;
 }
