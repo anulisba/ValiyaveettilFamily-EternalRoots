@@ -120,7 +120,7 @@ const MemorialWebsite = () => {
                 <div className="container">
                     <button className="btn-primary">Home</button>
                     <button className="btn-secondary">Gallery</button>
-                    <button className="btn-secondary">Timeline</button>
+                    {/* <button className="btn-secondary">Timeline</button> */}
                 </div>
             </section>
 
@@ -174,17 +174,51 @@ const MemorialWebsite = () => {
                     <div className="family-content">
                         <div className="family-text">
                             <p>
-                                {language === "ml" ? "വലിയവീട്ടിൽ മാത്തുക്കുട്ടി തെച്ചാമ്മ താന്നിക്കൽ ദമ്പതികളുടെ 10 മക്കളിൽ മൂത്തമകനായ ജോസഫ് മാത്യു (ജോയ്) 1941- ൽ തന്റെ അമ്മവീടായ ആലപ്പുഴ തത്തംപള്ളി താന്നിക്കൽ വീട്ടിൽ ജനിച്ചു. സഹോദരങ്ങളായ തോമസ് മാത്യു, ജോൺ മാത്യു, ജോളി മാത്യു, മേരിക്കുട്ടി സെബാസ്റ്റിയൻ, ജെസ്സി ജോസ്, ജോമി മാത്യു, റെജി ബാബു, ജാനമ്മ ജോർജ്, പരേതയായ പൊന്നമ്മ ലൂക്കോസ് എന്നിവരോടൊപ്പം ചങ്ങനാശ്ശേരി തൃക്കോട്ടിതാനം എന്നിടത്ത് തൻ്റെ ബാല്യകാലം ചിലവഴിക്കുകയും, തുടർന്ന് പത്താംക്ലാസ് വരെ സെന്റ് ബെർച്ഛ്മൻസ് സ്കൂളിലും, പ്രീഡിഗ്രി സെന്റ് ബെർച്ഛ്മൻസ് കോളേജിലുമായി വിദ്യാഭ്യാസം പൂർത്തിയാക്കി." : "Joseph Mathew(Joy), the eldest son of Mr. Mathukutty Valiyaveettil and Mrs.Thechamma Thannickal , was born in 1941 at his maternal home, Thannickal House, Tathamppally, Alappuzha. He was raised at Thrikkodithanam, Changanassery, along with his siblings — Thomas Mathew, John Mathew, Jolly Mathew, Marykutty Sebastian, Jessy Jose, Jomy Mathew, Reji Babu, Janamma George, and the late Ponnamma Lukose."}
+                                {language === "ml" ? "വലിയവീട്ടിൽ മാത്തുക്കുട്ടി താന്നിക്കാട് ത്രേസ്യാമ്മ ദമ്പതികളുടെ 10 മക്കളിൽ മൂത്തമകനായ ജോസഫ് മാത്യു (ജോയ്) 1941- ൽ തന്റെ അമ്മവീടായ ആലപ്പുഴ തത്തംപള്ളി താന്നിക്കാട് വീട്ടിൽ ജനിച്ചു.  തുടർന്ന് പത്താംക്ലാസ് വരെ സെന്റ് ബെർക്ക്മൻസ് സ്കൂളിലും, പ്രീ-യൂണിവേഴ്സിറ്റി സെന്റ് ബെർക്ക്മൻസ് കോളേജിലുമായി വിദ്യാഭ്യാസം പൂർത്തിയാക്കി." : "Joseph Mathew(Joy), the eldest son of Mr. Mathukutty Valiyaveettil and Mrs.Thresiamma Thannikkadu , was born in 1941 at his maternal home, Thannikkadu House, Tathamppally, Alappuzha. He completed his schooling up to the tenth standard at St. Berchmans’ High School, Changanassery, and pursued his Pre-University studies at St. Berchmans’ College."}
                             </p>
                             <p>
-                                1959 -ൽ ചങ്ങനാശേരിയിൽന്നിന്നും  മലബാറിലെ തെരുവത്തകടവ് എന്നിടത്തേക്ക് കുടിയേറി താമസിച്ചു. വ്യാപാരത്തിൽ താത്പര്യം കാണിച്ചിരുന്നതിനാൽ പിതാവിൻ്റെ അരിമിൽ വ്യാപാരത്തിൽ ഏർപ്പെടുകയും, പിന്നീട്  കുടുംബ സ്ഥാപനമായ വലിയവീടൻ വുഡ് ഇൻഡസ്ട്രിയിൽ  പ്രവർത്തിച്ചു പോന്നു. 1970 കളിൽ പൊതുജനങ്ങൾക്കു വേണ്ടി തെരുവത്തകടവ് - ഏലത്തുർ റൂട്ടിൽ ബോട്ട് സർവീസ് ആരംഭിച്ചു.
+                                {language === "ml" ? "1958 -ൽ ചങ്ങനാശ്ശേരിയിൽ നിന്നും മാതാപിതാക്കളും സഹോദരങ്ങളായ തോമസ് മാത്യു, ജോൺ മാത്യു, ജോളി മാത്യു, മേരിക്കുട്ടി സെബാസ്റ്റ്യൻ, ജെസ്സി ജോസ്, ജോമി മാത്യു, റെജി ബാബു, ജൈനമ്മ ജോർജ്, പരേതയായ പൊന്നമ്മ ലൂക്കോസ് എന്നിവരോടും കൂടെ  മലബാറിലെ തെരുവത്ത്കടവിലേക്ക് കുടിയേറി താമസിച്ചു. വ്യാപാരത്തിൽ താത്പര്യം കാണിച്ചിരുന്നതിനാൽ പിതാവിൻ്റെ അരിമിൽ വ്യാപാരത്തിൽ ഏർപ്പെടുകയും, പിന്നീട്  കുടുംബ സ്ഥാപനമായ വലിയവീടൻ വുഡ് ഇൻഡസ്ട്രിയിൽ  പ്രവർത്തിച്ചു പോന്നു. 1970 കളിൽ പൊതുജനങ്ങൾക്കു വേണ്ടി തെരുവത്തകടവ് - എലത്തൂർ റൂട്ടിൽ ബോട്ട് സർവീസ് ആരംഭിച്ചു." : "In 1958, together with his parents and siblings – Thomas Mathew, John Mathew, Jolly Mathew, Marykutty Sebastian, Jessy Jose, Jomy Mathew, Reji Babu, Jainamma George, and the late Ponnamma Lukose – he migrated from Changanassery to Theruvathukadavu in Malabar. There, he joined his father in the rice milling business and later contributed to the family enterprise, Valiyaveedan Wood Industries. A visionary by nature, he ventured into new fields with courage and conviction. During the 1970s, he introduced a boat service along the Theruvathkadavu–Elathur route, enhancing local connectivity and livelihood."}
                             </p>
                             <p>
-                                1972 ൽ ചെമ്പനോട ഒഴുകയിൽ വീട്ടിൽ ശാന്തമ്മയെ തൻ്റെ ജീവിതസഖിയാക്കി. 1978 ൽ പേരാമ്പ്ര സോമിൽ & വുഡ് ഇൻഡസ്ട്രീസ് എന്ന സ്ഥാപനം, പേരാമ്പ്ര പൈതോത്ത് റോഡിൽ സ്ഥാപിക്കുകയും തൻ്റെ കുടുംബത്തോടൊപ്പം പേരാമ്പ്രയിൽ താമസമാക്കുകയും ചെയ്തു. 1980 ൽ മില്ലിനോടട്ടുത്ത് സ്വന്തം വീടുവെച്ച് താമസമാക്കി. കൊയിലാണ്ടി താലൂക്ക് സോമിൽ അസോസിയേഷൻ പ്രസിഡന്റും പിന്നീട് കോഴിക്കോട് ജില്ലാ - സോമിൽ അസോസിയേഷൻ സ്ഥാപക നേതാവും ജില്ലാ പ്രസിഡന്റുമായി 30 വർഷത്തോളം സേവനമനുഷ്ഠിക്കുകയും ചെയ്‌തു
+                                {language === "ml" ? "1972 ൽ ചെമ്പനോട ഒഴുകയിൽ വീട്ടിൽ ശാന്തമ്മയെ തൻ്റെ ജീവിതസഖിയാക്കി.1978 ൽ പേരാമ്പ്ര സോമിൽ & വുഡ് ഇൻഡസ്ട്രീസ് എന്ന സ്ഥാപനം, പേരാമ്പ്ര പൈതോത്ത് റോഡിൽ സ്ഥാപിക്കുകയും തൻ്റെ കുടുംബത്തോടൊപ്പം പേരാമ്പ്രയിൽ താമസമാക്കുകയും ചെയ്തു. 1980 ൽ മില്ലിനോടടുത്ത് സ്വന്തം വീടുവെച്ച് താമസമാക്കി. പേരാമ്പ്ര സെൻ്റ് ഫ്രാൻസീസ് അസ്സീസി ദേവലയത്തിൻ്റെ  മൂന്നാമത്തെ ഇടവകാംഗവുമായിരുന്നു." : "In 1972, he married Mrs. Shanthamma of the Ozhukayil family, Chempanoda, who became his lifelong companion and partner. In 1978, he established “Perambra Sawmill & Wood Industries” on the Paithoth Road at Perambra and subsequently settled there with his family. By 1980, he had built and moved into his own home adjacent to the mill.He was among the earliest parishioners of St. Francis Assisi Church, Perambra."}
                             </p>
                             <p>
-                                2025 സെപ്റ്റംബർ 29 ന് നിത്യസമ്മാനത്തിനായി   വിളിക്കപ്പെട്ടു. പേരാമ്പ്ര സെന്റ് ആന്റണീസ്  ദേവാലയത്തിന്റെ പെരുവണ്ണാമൂഴിയിലുള്ള സെമിത്തേരിയിൽ അന്ത്യവിശ്രമം കൊള്ളുന്നു.
+                                {language === "ml" ? "കൊയിലാണ്ടി താലൂക്ക് സോമിൽ അസോസിയേഷൻ പ്രസിഡന്റും പിന്നീട് കോഴിക്കോട് ജില്ലാ - സോമിൽ അസോസിയേഷൻ സ്ഥാപക നേതാവും ജില്ലാ പ്രസിഡന്റുമായി 30 വർഷത്തോളം സേവനമനുഷ്ഠിക്കുകയും ചെയ്‌തു. " : " A respected leader in his field, Joseph Mathew served as President of the Koyilandy Taluk Sawmill Association and later became the founding leader and District President of the Kozhikode District Sawmill Association, positions he held with dedication and distinction for over three decades."}
                             </p>
+                            <p>
+                                {language === "ml" ? "2025 സെപ്റ്റംബർ 29 ന് നിത്യസമ്മാനത്തിനായി   വിളിക്കപ്പെട്ടു.  പേരാമ്പ്ര സെൻ്റ് ഫ്രാൻസീസ് അസ്സീസി ദേവാലയത്തിൻ്റെ   പെരുവണ്ണാമൂഴിയിലുള്ള ഫാത്തിമ മാതാ ദേവാലയത്തിൽ സ്ഥിതി ചെയ്യുന്ന  സെമിത്തേരിയിൽ അന്ത്യവിശ്രമം കൊള്ളുന്നു." : "On 29 September 2025, Joseph Mathew  was called to eternal rest. The funeral rites were held at St.Francis Assisi Church Perambra, followed by interment in the cemetery adjoining at Fathima Matha Church,  Peruvannamuzhi."}
+                            </p>
+                            <p>
+                                {language === "ml" ? (
+                                    <>
+                                        മക്കൾ:<br />
+                                        ജാസ്മിൻ ഷാജി (ഭർത്താവ്. ഷാജി മണ്ഡപം ,തിരുവമ്പാടി)<br />
+                                        ജസ്റ്റിൻ ജോസഫ് (ഭാര്യ. സുനിത ജസ്റ്റിൻ ചൊവ്വാറ്റുകുന്നേൽ,പുളിങ്ങോം)<br />
+                                        ജോസിൻ ജോസഫ് (ഭാര്യ. ഡോ. ആനി സി. ഡേവിസ്, ചാലിശ്ശേരി വെട്ടൻ, അയ്യന്തോൾ, തൃശ്ശൂർ)
+                                    </>
+                                ) : (
+                                    <>
+                                        Children:<br />
+                                        Jasmin Shaji (married to Mr. Shaji Mandapam , Thiruvambady)<br />
+                                        Justin Joseph (married to Mrs. Sunitha Justin, Chowattukunnel, Pulingom)<br />
+                                        Josin Joseph (married to Dr. Anne C. Davis, Chalissery Vettan, Ayyanthole, Thrissur)
+                                    </>
+                                )}
+                            </p>
+                            <p>
+                                {language === "ml" ? (
+                                    <>
+                                        കൊച്ചുമക്കൾ:<br />
+                                        ജോൺ ഷാജി, അന്ന ജസ്റ്റിൻ, ജോസഫ് ഷാജി, മരിയ ജസ്റ്റിൻ, റെബേക്ക ജോസിൻ, ജോസഫ് ജസ്റ്റിൻ, മാത്യു ജോസിൻ, വെറോനിക്ക ജോസിൻ
+                                    </>
+                                ) : (
+                                    <>
+                                        Grandchildren:<br />
+                                        John Shaji, Anna Justin, Joseph Shaji, Mariya Justin, Rebekah Josin, Joseph Justin, Matthew Josin, and Veronica Josin.
+                                    </>
+                                )}
+                            </p>
+
                         </div>
                         <div className="family-image">
                             <img src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762014337/IMG-20251101-WA0043_ozoebh.jpg"
@@ -224,12 +258,27 @@ const MemorialWebsite = () => {
             {/* CTA Section */}
             <section className="cta-section">
                 <div className="t-container">
-                    <h2>വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല</h2>
+                    <h2>
+                        {language === "ml"
+                            ? "വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല"
+                            : "Whoever believes in Me will never die"}
+                    </h2>
                     <p>
-                        യേശു അവളോടു പറഞ്ഞു: പുനരുത്ഥാനവും ജീവനും ഞാനാകുന്നു;
-                        എന്നിൽ വിശ്വസിക്കുന്നവൻ മരിച്ചാലും ജീവിക്കും;
-                        ജീവിച്ചുകൊണ്ടു എന്നിൽ വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല.”
-                        (യോഹന്നാൻ 11:25-26)
+                        {language === "ml" ? (
+                            <>
+                                യേശു അവളോടു പറഞ്ഞു: പുനരുത്ഥാനവും ജീവനും ഞാനാകുന്നു;
+                                എന്നിൽ വിശ്വസിക്കുന്നവൻ മരിച്ചാലും ജീവിക്കും;
+                                ജീവിച്ചുകൊണ്ടു എന്നിൽ വിശ്വസിക്കുന്നവൻ ഒരിക്കലും മരിക്കയില്ല.”
+                                (യോഹന്നാൻ 11:25-26)
+                            </>
+                        ) : (
+                            <>
+                                Jesus said to her, “I am the resurrection and the life.
+                                The one who believes in Me will live, even though they die;
+                                and whoever lives by believing in Me will never die.”
+                                (John 11:25-26)
+                            </>
+                        )}
                     </p>
 
                     {/* Minimal Cross */}

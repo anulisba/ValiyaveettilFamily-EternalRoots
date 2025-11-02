@@ -436,8 +436,8 @@ section {
 /* CTA Section */
 .cta-section {
     text-align: center;
-    background-color: var(--color-primary);
-    color: var(--color-bg-light);
+    background-color: var(--color-header-bg);
+    color: var(--color-text-dark);
     padding: 80px 0;
     font-family: "Noto Serif Malayalam", serif;
 }
@@ -508,8 +508,8 @@ section {
 
 /* Footer */
 .footer {
-    background-color: var(--color-text-dark);
-    color: var(--color-bg-light);
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
     text-align: center;
     padding: 40px 0;
 }
