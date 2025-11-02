@@ -501,7 +501,7 @@ section {
 }
 
 .minimal-cross svg line {
-    stroke: #F0EDE6;
+    stroke: var(--color-text-dark);
     /* light cream color, adjust as needed */
 }
 
