@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './gallery.css';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const Gallery = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -81,10 +82,10 @@ const Gallery = () => {
         },
         {
             id: 11,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182713/DSC04874_Original_byqece.jpg",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/0d5dc9ca-6fe4-4980-bd94-e4bffffa9ba9_uitmri.jpg",
             title: "",
             year: "",
-            description: ""
+            description: "",
         },
         {
             id: 12,
@@ -150,12 +151,13 @@ const Gallery = () => {
             year: "",
             description: "",
         },
+
         {
             id: 22,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/0d5dc9ca-6fe4-4980-bd94-e4bffffa9ba9_uitmri.jpg",
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182713/DSC04874_Original_byqece.jpg",
             title: "",
             year: "",
-            description: "",
+            description: ""
         },
 
 
@@ -198,15 +200,7 @@ const Gallery = () => {
     const viewTimeline = () => navigate('/timeline');
     return (
         <div className="gallery-page">
-            <header className="header">
-                <div className="t-container">
-                    <div className="logo">
-                        <h1>Memory Lane</h1>
-                    </div>
-
-
-                </div>
-            </header>
+            <Header />
             {/* Secondary Navbar for CTA buttons */}
             <section className="secondary-nav">
                 <div className="container">
