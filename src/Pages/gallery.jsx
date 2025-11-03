@@ -73,6 +73,15 @@ const Gallery = () => {
             year: "1998",
             description: "Family vacation at the beach house in summer '98"
         },
+
+        {
+            id: 23,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/IMG_20251103_210722_ab6m4k.jpg",
+            title: "",
+            year: "",
+            description: ""
+        },
+
         {
             id: 10,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/DSC01428_Original_celbm6.jpg",
@@ -81,8 +90,8 @@ const Gallery = () => {
             description: "Family vacation at the beach house in summer '98"
         },
         {
-            id: 11,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/0d5dc9ca-6fe4-4980-bd94-e4bffffa9ba9_uitmri.jpg",
+            id: 18,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/Family_h3un8z.jpg",
             title: "",
             year: "",
             description: "",
@@ -94,6 +103,21 @@ const Gallery = () => {
             year: "",
             description: "",
         },
+
+        {
+            id: 11,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/0d5dc9ca-6fe4-4980-bd94-e4bffffa9ba9_uitmri.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 27,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/8574aa0e-92ca-46ce-a731-fa75538c480d_gfcc3h.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
         {
             id: 13,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/aa4d7a15-4498-4d6a-a8d1-1ddb631d6441_ir3tju.jpg",
@@ -101,6 +125,7 @@ const Gallery = () => {
             year: "",
             description: "",
         },
+
         {
             id: 14,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182712/IMG_3261_dvqc6w.jpg",
@@ -123,13 +148,7 @@ const Gallery = () => {
             year: "",
             description: "",
         },
-        {
-            id: 18,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/Family_h3un8z.jpg",
-            title: "",
-            year: "",
-            description: "",
-        },
+
         {
             id: 19,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/IMG_7102_Original_ty7nur.jpg",
@@ -159,6 +178,27 @@ const Gallery = () => {
             year: "",
             description: ""
         },
+        {
+            id: 24,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/6679806d-f5a1-439e-81d1-b7658f53df1c_dadndt.jpg",
+            title: "",
+            year: "",
+            description: ""
+        },
+        {
+            id: 25,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/afc1c0ed-42ff-4104-bc54-326eac530ca3_ayahxv.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 26,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/7a91ddae-0975-4a33-a257-ec8941b36616_w4aj0h.jpg",
+            title: "",
+            year: "",
+            description: "",
+        }
 
 
 
