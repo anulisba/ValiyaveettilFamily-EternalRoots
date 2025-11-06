@@ -120,7 +120,7 @@ const MemorialWebsite = () => {
                 <div className="container">
                     <button className="btn-primary">Home</button>
                     <button className="btn-secondary" onClick={viewGallery}>Gallery</button>
-                    {/* <button className="btn-secondary">Timeline</button> */}
+                    <button className="btn-secondary" onClick={viewTimeline}>Timeline</button>
                 </div>
             </section>
 

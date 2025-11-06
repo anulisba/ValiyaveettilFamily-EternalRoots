@@ -254,7 +254,7 @@ const Gallery = () => {
                 <div className="container">
                     <button className="btn-secondary" onClick={viewHome}>Home</button>
                     <button className="btn-primary">Gallery</button>
-                    {/* <button className="btn-secondary" onClick={viewTimeline}>Timeline</button> */}
+                    <button className="btn-secondary" onClick={viewTimeline}>Timeline</button>
                 </div>
             </section>
 

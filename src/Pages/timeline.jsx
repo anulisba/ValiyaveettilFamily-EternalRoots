@@ -2,176 +2,31 @@
 import React, { useState, useEffect } from 'react';
 import './timeline.css';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from '../context/LanguageContext';
 
 const Timeline = () => {
     const [activeYear, setActiveYear] = useState(null);
     const [isVisible, setIsVisible] = useState(false);
     const navigate = useNavigate();
-    // Sample timeline data - replace with your actual family information
-    const familyTimeline = [
-        {
-            year: 1904,
-            title: "ജനനം",
-            description: "ചാക്കോ മഠത്തിനകത്ത്",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758988545/WhatsApp_Image_2025-09-27_at_9.20.45_PM_wtkpsw.jpg",
-        },
-        {
-            year: 1909,
-            title: "ജനനം",
-            description: "ഏലമ്മ ചാക്കോ",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg",
-            members: ["Great Grandmother"]
-        },
-        {
-            year: 1926,
-            title: "ജനനം",
-            description: "അബ്രാഹം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
-            image: "https://images.unsplash.com/photo-1579118123582-366e837c2d2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Great Grandfather", "Great Grandmother"]
-        },
-        {
-            year: 1928,
-            title: "ജനനം ",
-            description: "ഏലിക്കുട്ടി",
-            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Grandfather"]
-        },
-        {
-            year: 1947,
-            title: "മലബറിലേക്ക് കുടിയേറി (പെരുവണ്ണാമൂഴി)",
-            description: "",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
-            members: ["Uncle 1"]
-        },
-        {
-            year: 1961,
-            title: "ജനനം",
-            description: "അബ്രാഹം എം. എ (സോമൻ)",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg",
-            members: ["Uncle 2"]
-        },
-        {
-            year: 1965,
-            title: "ജനനം",
-            description: "തോമസ് എം. എ (ബാബു)",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg",
-            members: ["Grandfather", "Grandmother"]
-        },
-        {
-            year: 1983,
-            title: "മരണം",
-            description: "ചാക്കോ മഠത്തിനകത്ത്",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758988545/WhatsApp_Image_2025-09-27_at_9.20.45_PM_wtkpsw.jpg",
-        },
-        {
-            year: 1985,
-            title: "മരണം",
-            description: "ഏലമ്മ ചാക്കോ",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758989010/WhatsApp_Image_2025-09-27_at_9.25.24_PM_1_k7wgyp.jpg",
-            members: ["Great Grandmother"]
-        },
-        {
-            year: 1988,
-            title: "ജനനം ",
-            description: "ഏലിക്കുട്ടി",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
-            members: ["Child 3"]
-        },
-        {
-            year: 1989,
-            title: "മരണം",
-            description: "ഏലിക്കുട്ടി",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
-            members: ["Child 3"]
-        },
-        {
-            year: 1990,
-            title: " ജനനം",
-            description: "മേരി",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 1991,
-            title: "മരണം",
-            description: "മേരി",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 1994,
-            title: "ജനനം",
-            description: "അബ്രാഹം",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 1995,
-            title: "മരണം",
-            description: "അബ്രാഹം",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1759066641/Untitled_design_17_jzd9go.png",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 1998,
-            title: "മരണം",
-            description: "ഏലിക്കുട്ടി",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 2011,
-            title: "മരണം",
-            description: "അബ്രഹാം മഠത്തിനകത്ത് (പാപ്പച്ചൻ)",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994782/WhatsApp_Image_2025-09-27_at_10.22.50_PM_knfth6.jpg",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 2017,
-            title: "മരണം",
-            description: "തോമസ് എം. എ (ബാബു)",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758994716/WhatsApp_Image_2025-09-27_at_11.07.53_PM_zd26q1.jpg",
-            members: ["Great Grandfather"]
-        },
-        {
-            year: 2025,
-            title: "മരണം",
-            description: "അബ്രാഹം എം. എ (സോമൻ)",
-            image: "https://res.cloudinary.com/dpo91btlc/image/upload/v1758993906/WhatsApp_Image_2025-09-27_at_10.54.22_PM_twvz1u.jpg",
-            members: ["Great Grandfather"]
-        }
-    ];
+    const { language } = useLanguage();
+
 
     useEffect(() => {
         // Trigger animation
         setIsVisible(true);
 
-        // Set first event as active by default
-        setActiveYear(familyTimeline[0].year);
+
     }, []);
 
-    const toggleEvent = (year) => {
-        if (activeYear === year) {
-            setActiveYear(null);
-        } else {
-            setActiveYear(year);
-        }
-    };
 
     const viewGallery = () => navigate('/gallery');
     const viewHome = () => navigate('/')
 
     return (
-        <div className="timeline-page">
+        <div className="gallery-page">
             {/* Header */}
-            <header className="header">
-                <div className="t-container">
-                    <div className="logo">
-                        <h1>Memory Lane</h1>
-                    </div>
-
-                </div>
-            </header>
+            <Header />
             {/* Secondary Navbar for CTA buttons */}
             <section className="secondary-nav">
                 <div className="container">
@@ -180,115 +35,92 @@ const Timeline = () => {
                     <button className="btn-primary">Timeline</button>
                 </div>
             </section>
-            <div className="timeline-header">
+            <div className="gallery-header">
                 <div className="container">
-                    <h1>Family Timeline</h1>
-
+                    <h1>{language === "ml" ? "കുടുംബചരിത്രം" : "Family History"}</h1>
+                    <div className="underline"></div>
                 </div>
             </div>
 
-            {/* Timeline Section */}
-            <section className="timeline-section">
-                <div className="t-container">
-                    <div className={`timeline ${isVisible ? 'visible' : ''}`}>
-                        {familyTimeline.map((event, index) => (
-                            <div
-                                key={index}
-                                className={`timeline-event ${index % 2 === 0 ? 'left' : 'right'} ${activeYear === event.year ? 'active' : ''}`}
-                                onClick={() => toggleEvent(event.year)}
-                            >
-                                <div className="event-date">{event.year}</div>
-                                <div className="event-content">
-                                    <h3 style={{ margin: "0" }}>{event.title}</h3>
+            <section className="timeline-container">
+                <div className="timeline-content">
+                    <p className="timeline-text">
+                        {language === "ml" ? "എ .ഡി . 1750  ൽ  കുറിവിലങ്ങാട്  പകലോമറ്റം  കുടുംബ പരമ്പരയിൽപെട്ട  ചക്കാല വീട്ടിൽ നിന്നും തൃക്കൊടിത്താനത്തേക്ക്  പത്തില്ലത്തിൽ പോറ്റിമാരാൽ ക്ഷണിക്കപ്പെടുകയും തൃക്കൊടിത്താനം മഹാക്ഷേത്രത്തിന് സമീപത്തായി സ്ഥിതിചെയ്തിരുന്ന അറപ്പുരയുടെ സംരക്ഷണ ദൗത്യത്തിൻ്റെ ഭാഗമായി അറപ്പുരയുടെ വാതിക്കൽ താമസമാക്കുകയും അതുവഴി അറവാക്കൽ കുടുബത്തിൻ്റെ സ്ഥാപകനാവുകയും  ചെയ്ത തോമാ ഔസേഫിൻ്റെ (ജോസഫ് തോമസ്) സന്തതി പരമ്പരകളിൽപ്പെട്ട അറവാക്കൽ, അറവാക്കൽ പുതുപ്പറമ്പിൽ, പുതുപ്പറമ്പിൽ, വലിയവീട്ടിൽ, കുടിലംപറമ്പിൽ എന്നീ കുടുംബ പേരുകളിൽ അറിയപ്പെടുന്നു" : "Around A.D. 1750, a member of the distinguished Pakalomattam lineage of Kuravilangad, one of the most ancient Christian families of Kerala—was invited by the 'Pathillathil Pottymar' to settle in Thrikodithanam Responding to their invitation, he took residence at Arappura, situated near the Thrikodithanam Mahakshetram, as part of his entrusted duty to safeguard the sacred Arappura (the temple’s treasury or sanctum storehouse). Through this noble service, Thoma Ouseph (Joseph Thomas) became recognised as the founder of the Aravackal family. His descendants, over the generations, came to be known by the family names Aravackal, Aravackal Puthuparambil, Puthuparambil, Valiyaveettil, and Kudilamparambil each branch preserving the proud heritage and legacy of their illustrious forebear."}
+                    </p>
+                    <img
+                        src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762444260/WhatsApp_Image_2025-11-05_at_9.43.45_PM_lmkljl.jpg"
+                        alt="Family"
+                        className="timeline-image"
+                    />
 
-                                    <div className="event-description">
-                                        <h4>{event.description}</h4>
-                                    </div>
-                                    {/* <div className="event-image">
-                                        <img src={event.image} alt={event.title} />
-                                    </div> */}
-                                </div>
-                                <div className="event-marker"></div>
-                            </div>
-                        ))}
-                        <div className="timeline-line"></div>
-                    </div>
+                    <p className="timeline-text">
+                        {language === "ml" ? (
+                            <>
+                                ഈ പരമ്പരയിൽ നിന്നുള്ള കോച്ചായൻ എന്നു വിളിക്കപ്പെടുന്ന വി.ജെ. ജോസഫും ഭാര്യ അന്നമ്മയും
+                                തൃക്കൊടിത്താനത്ത് താമസിച്ചിരുന്നു. കോച്ചായൻ ഒരു അധ്യാപകനായിരുന്നു. പിന്നീട്
+                                കുറുമ്പനാടം എൽ.പി. സ്കൂളിൽ ഹെഡ്മാസ്റ്റർ ആയി സേവനമനുഷ്ഠിക്കുകയും ചെയ്തു.
+                                ശാന്തസ്വഭാവം, ലളിതമായ ജീവിതരീതി എന്നിവ കൊണ്ട് അദ്ദേഹം എല്ലാവരുടെയും ആദരവ് നേടി.
+                                അന്നമ്മക്ക് ആയുർവേദത്തിൽ പ്രാവിണ്യമുണ്ടായിരുന്നതിനാൽ, അവർ അറിയപ്പെട്ടിരുന്ന
+                                ഒരു വൈദ്യയായിരുന്നു. ആയുർവേദ മരുന്നുകൾ ഉപയോഗിച്ച് നിരവധി കുടുംബങ്ങളെ
+                                ചികിത്സിച്ച് സഹായിച്ചിരുന്നു.
+                                <br />
+                                <br />
+                                <strong>അവരുടെ മക്കൾ:</strong>
+                                <ul className="timeline-list">
+                                    <li><span className="timeline-dot">•</span> വി.ജെ. തോമസ്, അധ്യാപകനായും തൃക്കൊടിത്താനത്തെ മതബോധന സ്കൂളിന്റെ ഹെഡ്മാസ്റ്ററായും സേവനം അനുഷ്ഠിച്ചു.</li>
+                                    <li><span className="timeline-dot">•</span> വി.ജെ. മാത്യു ബിസിനസിൽ പ്രവേശിച്ചു (ജോസഫ് മാത്യുവിന്റെ (ഡാഡിയുടെ )പിതാവ്).</li>
+                                    <li><span className="timeline-dot">•</span> വി.ജെ. ജോൺ, കുടുംബഭൂമിയും കൃഷിയും നോക്കി.</li>
+                                    <li><span className="timeline-dot">•</span> അച്ചാമ്മ  തെക്കേടത്ത് കുടുംബത്തിൽ വിവാഹം കഴിച്ച് പൂണെയിൽ സ്ഥിരതാമസമായി.</li>
+                                    <li><span className="timeline-dot">•</span> വി.ജെ. ജോർജ് ഇന്ത്യൻ വ്യോമസേനയിൽ സേവനമനുഷ്ഠിച്ചിരുന്നു.</li>
+                                    <li><span className="timeline-dot">•</span>  തങ്കമ്മ മാത്തൂർ കുടുംബത്തിൽ വിവാഹം കഴിച്ചു.</li>
+                                    <li><span className="timeline-dot">•</span> വി.ജെ. ഫ്രാൻസിസ്  ഇന്ത്യൻ നാവികസേനയിൽ ജോലി ചെയ്തു, പിന്നീട് കാനഡയിലെ കോഡാക് ഫിലിംസിൽ ഫിനാൻഷ്യൽ കൺട്രോളറായി ചേർന്ന് കുടുംബസമേതം അവിടെ സ്ഥിരതാമസമായി.</li>
+                                    <li><span className="timeline-dot">•</span> ഗ്രേസ്കുട്ടി, ഓതറ കുടുംബത്തിൽ വിവാഹം കഴിച്ചു.</li>
+                                </ul>
+
+                                ഇവരിൽ വി.ജെ. മാത്യു തൃക്കൊടിത്താനത്ത് തുടരുകയും താന്നിക്കാട് കുടുംബത്തിലെ ത്രേസ്യമ്മ യുമായി വിവാഹിതനാകുകയും ചെയ്തു. പിന്നീട് കോഴിക്കോട് തെരുവത്ത്കടവിൽ താമസം തുടങ്ങി.
+                            </>
+                        ) : (
+                            <>
+                                From this line came V.J. Joseph, fondly called Kochayan, and his wife
+                                Annamma. They lived in Thrikodithanam. Kochayan was a teacher by profession
+                                and later became Headmaster at the Kurumpanadom LP School. He was respected for his calm
+                                nature and simple way of living. Annamma was known as a vaidhya, treating people
+                                with Ayurvedic medicines and helping many families around the area.
+                                <br />
+                                <br />
+                                <strong>Their children were:</strong>
+                                <ul className="timeline-list">
+                                    <li><span className="timeline-dot">•</span> V.J. Thomas — a teacher and Headmaster of the Sunday School in Thrikodithanam.</li>
+                                    <li><span className="timeline-dot">•</span> V.J. Mathew — who went into business (father of Joseph Mathew — our daddy).</li>
+                                    <li><span className="timeline-dot">•</span> V.J. John — who looked after the family land and farming.</li>
+                                    <li><span className="timeline-dot">•</span> Achamma — married into the Thekkedam family and settled in Pune.</li>
+                                    <li><span className="timeline-dot">•</span> V.J. George — served in the Indian Air Force.</li>
+                                    <li><span className="timeline-dot">•</span> Thangamma — married into the Mathoor family.</li>
+                                    <li><span className="timeline-dot">•</span> V.J. Francis — worked in the Indian Navy and later joined Kodak Films in Canada as a Financial Controller, where he settled with his family.</li>
+                                    <li><span className="timeline-dot">•</span> Gracekutty — married into the Othara family.</li>
+                                </ul>
+                                Among them, V.J. Mathew continued in Thrikodithanam and was married to
+                                Thresiamma from the Thannikad family. Later, they moved to
+                                Theruvathekadav in Calicut.
+                            </>
+                        )}
+                    </p>
+
+                    <img
+                        src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762014337/IMG-20251101-WA0043_ozoebh.jpg"
+                        alt="Family"
+                        className="timeline-image"
+                    />
+
+                    <p className="timeline-text">[same paragraph repeated...]</p>
+                    <img
+                        src="https://res.cloudinary.com/dpo91btlc/image/upload/v1762014337/IMG-20251101-WA0043_ozoebh.jpg"
+                        alt="Family"
+                        className="timeline-image"
+                    />
                 </div>
             </section>
 
-            {/* Family Tree Section */}
-            <section className="family-tree-section">
-                <div className="container">
-                    <div className="section-title">
-                        <h2>Family Tree</h2>
-                        <div className="underline"></div>
-                    </div>
-                    <div className="family-tree">
-                        <div className="generation">
-                            <h3>Great Grandparents</h3>
-                            <div className="family-members">
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>John Smith Sr.</h4>
-                                    <p>1920 - 2008</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>Mary Johnson</h4>
-                                    <p>1925 - 2015</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="generation">
-                            <h3>Their Children</h3>
-                            <div className="family-members">
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>Robert Smith</h4>
-                                    <p>1950 - Present</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>James Smith</h4>
-                                    <p>1955 - Present</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>William Smith</h4>
-                                    <p>1960 - Present</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="generation">
-                            <h3>Grandchildren</h3>
-                            <div className="family-members">
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>Michael Smith</h4>
-                                    <p>1985 - Present</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>Sarah Smith</h4>
-                                    <p>1988 - Present</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>David Smith</h4>
-                                    <p>1992 - Present</p>
-                                </div>
-                                <div className="family-member">
-                                    <div className="member-photo"></div>
-                                    <h4>Emily Smith</h4>
-                                    <p>1995 - Present</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Footer */}
             <footer className="footer">
