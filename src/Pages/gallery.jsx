@@ -73,7 +73,28 @@ const Gallery = () => {
             year: "1998",
             description: "Family vacation at the beach house in summer '98"
         },
-
+        ,
+        {
+            id: 31,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447884/WhatsApp_Image_2025-11-06_at_10.18.08_PM_xmlmuv.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 32,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447884/WhatsApp_Image_2025-11-06_at_10.16.39_PM_a3nbni.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 33,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447884/WhatsApp_Image_2025-11-06_at_10.20.43_PM_jb6j5x.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
         {
             id: 23,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/IMG_20251103_210722_ab6m4k.jpg",
@@ -203,6 +224,27 @@ const Gallery = () => {
         {
             id: 26,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762187759/7a91ddae-0975-4a33-a257-ec8941b36616_w4aj0h.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 28,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447883/WhatsApp_Image_2025-11-06_at_10.19.07_PM_slnbbk.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 29,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447883/WhatsApp_Image_2025-11-06_at_10.17.14_PM_lvpchk.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 30,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447884/WhatsApp_Image_2025-11-06_at_10.17.35_PM_sfntt2.jpg",
             title: "",
             year: "",
             description: "",
