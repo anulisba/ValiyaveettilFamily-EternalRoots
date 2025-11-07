@@ -131,7 +131,7 @@ const Timeline = () => {
             {/* Footer */}
             <footer className="footer">
                 <div className="t-container">
-                    <p>Created with love by Vliyaveettil Family</p>
+                    <p>Created with love by Valiyaveettil Family</p>
                     <p>For Memorial Websites Contact us:</p>
                     <p>+91 9446914883</p>
                     <p>eternalroots2020@gmail.com</p>

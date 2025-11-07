@@ -73,7 +73,27 @@ const Gallery = () => {
             year: "1998",
             description: "Family vacation at the beach house in summer '98"
         },
-        ,
+        {
+            id: 34,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762531667/WhatsApp_Image_2025-11-07_at_9.31.57_PM_hqimek.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
+        },
+        {
+            id: 35,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762531667/WhatsApp_Image_2025-11-07_at_9.32.32_PM_bp2ng9.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
+        },
+        {
+            id: 36,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762531667/WhatsApp_Image_2025-11-07_at_9.32.50_PM_ix3msa.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
+        },
         {
             id: 31,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762447884/WhatsApp_Image_2025-11-06_at_10.18.08_PM_xmlmuv.jpg",
@@ -103,13 +123,7 @@ const Gallery = () => {
             description: ""
         },
 
-        {
-            id: 10,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/DSC01428_Original_celbm6.jpg",
-            title: "Beach Vacation",
-            year: "1998",
-            description: "Family vacation at the beach house in summer '98"
-        },
+
         {
             id: 18,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/Family_h3un8z.jpg",
@@ -118,12 +132,13 @@ const Gallery = () => {
             description: "",
         },
         {
-            id: 16,
-            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/IMG_3216_dbxa1y.jpg",
-            title: "",
-            year: "",
-            description: "",
+            id: 10,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182714/DSC01428_Original_celbm6.jpg",
+            title: "Beach Vacation",
+            year: "1998",
+            description: "Family vacation at the beach house in summer '98"
         },
+
         {
             id: 12,
             src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182712/DSC01348_Original_ymvzss.jpg",
@@ -248,7 +263,21 @@ const Gallery = () => {
             title: "",
             year: "",
             description: "",
-        }
+        },
+        {
+            id: 37,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762531668/WhatsApp_Image_2025-11-07_at_9.31.45_PM_ttq4ri.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
+        {
+            id: 16,
+            src: "https://res.cloudinary.com/dpo91btlc/image/upload/v1762182709/IMG_3216_dbxa1y.jpg",
+            title: "",
+            year: "",
+            description: "",
+        },
 
 
 
@@ -309,6 +338,8 @@ const Gallery = () => {
 
 
             {/* Gallery Grid */}
+            {/* Video Memories Section */}
+
             <section className="gallery-grid-section">
                 <div className="t-container">
                     <div className="gallery-grid">
@@ -332,6 +363,26 @@ const Gallery = () => {
                     </div>
                 </div>
             </section>
+            <section className="video-section">
+                <div className="t-container">
+                    <h2 className="video-heading">Cherished Moments</h2>
+                    <div className="video-grid">
+                        <div className="video-item">
+                            <video controls playsInline className="family-video">
+                                <source src="https://res.cloudinary.com/dpo91btlc/video/upload/v1762532048/WhatsApp_Video_2025-11-07_at_9.41.56_PM_qxqifl.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div className="video-item">
+                            <video controls playsInline className="family-video">
+                                <source src="https://res.cloudinary.com/dpo91btlc/video/upload/v1762532465/WhatsApp_Video_2025-11-07_at_9.46.20_PM_awfhwt.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* Lightbox Modal */}
             {lightboxOpen && (
